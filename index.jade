@@ -36,6 +36,7 @@ html
       svg
         max-width icon-width
         max-height @max-width
+        transition transform 300ms cubic-bezier(0.175, 0.885, 0.320, 1.275)
         *
           fill white !important
       .cc svg
@@ -43,6 +44,8 @@ html
       nav a
         margin-right 20px
         cursor pointer
+        &:hover svg
+          transform scale(1.1)
   body
     .container
       img( src='feather.jpg' )
