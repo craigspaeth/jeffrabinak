@@ -1,0 +1,62 @@
+html
+  style
+    link( href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' )
+    :stylus
+      @import './node_modules/nib/index'
+      light-blue = #61CDE4
+      icon-width = 30px
+      global-reset()
+      body
+        background light-blue
+        color white
+        font-family 'Lato', sans-serif
+        padding 0
+        margin 0
+        line-height 1.4em
+        font-smoothing antialiased
+      img
+        margin auto
+        display block
+        max-height 50vh
+      h1
+        font-weight normal
+        margin 30px 0
+      hr
+        background transparent
+        border 0
+        border-top 2px solid rgba(255,255,255,0.7)
+        width 60%
+        margin 20px auto
+      .container
+        max-width 560px
+        padding 0 20px
+        margin auto
+        text-align center
+      svg
+        max-width icon-width
+        max-height @max-width
+        *
+          fill white !important
+      .cc svg
+        max-width icon-width + 30px
+      nav a
+        margin-right 20px
+        cursor pointer
+  body
+    .container
+      img( src='feather.jpg' )
+      h1 Jeff Rabinak
+      hr
+      nav
+        a.cc
+          include ./cc.svg
+        a
+          include ./email.svg
+        a
+          include ./facebook.svg
+        a
+          include ./twitter.svg
+        a
+          include ./instagram.svg
+      hr
+      p Jeff is a writer/direct/editor/podcaster/jerk of all trades living in Brooklyn, NY. Ask to go birding with him. He'll love it.
